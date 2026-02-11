@@ -1,0 +1,26 @@
+backend:
+  name: login-backend
+  replicas: 1
+  image:
+    repository: kjbsdfbuhsdbfu/login_system
+    tag: v1
+  ports:
+    api: 5000
+    frontend: 3000
+
+mongo:
+  name: mongo
+  image: mongo:latest
+  storage: 1Gi
+
+config:
+  mongoUri: mongodb://mongo:27017/mern-app
+  clientUrl: http://localhost:5000
+
+secret:
+  jwtSecret: your_docker_secret
+
+ingress:
+  enabled: true
+  className: nginx
+  host: login.example.com

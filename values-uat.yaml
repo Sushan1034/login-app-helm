@@ -1,0 +1,10 @@
+backend:
+  replicas: 1
+  image:
+    tag: uat-v1
+
+config:
+  clientUrl: http://uat-login.example.com
+
+ingress:
+  host: uat-login.example.com

@@ -1,0 +1,7 @@
+backend:
+  replicas: 2
+  image:
+    tag: v1
+
+ingress:
+  host: login.example.com
