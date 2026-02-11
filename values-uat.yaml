@@ -3,6 +3,10 @@ backend:
   image:
     tag: uat-v1
 
+service:
+  type: ClusterIP    # or NodePort / LoadBalancer depending on your setup
+  port: 80
+
 config:
   clientUrl: http://uat-login.example.com
 
