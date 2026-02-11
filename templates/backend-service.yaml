@@ -7,9 +7,6 @@ spec:
     app: {{ .Values.backend.name }}
   ports:
     - name: api
-      port: {{ .Values.backend.ports.api }}
-      targetPort: {{ .Values.backend.ports.api }}
-    - name: frontend
-      port: {{ .Values.backend.ports.frontend }}
-      targetPort: {{ .Values.backend.ports.frontend }}
+      port: 5000
+      targetPort: 5000
   type: ClusterIP
