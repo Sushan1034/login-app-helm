@@ -6,7 +6,6 @@ backend:
     tag: v1
   ports:
     api: 5000
-    frontend: 3000
 
 mongo:
   name: mongo

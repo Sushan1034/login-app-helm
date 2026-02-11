@@ -17,12 +17,5 @@ spec:
               service:
                 name: {{ .Values.backend.name }}
                 port:
-                  number: {{ .Values.backend.ports.frontend }}
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: {{ .Values.backend.name }}
-                port:
                   number: {{ .Values.backend.ports.api }}
 {{- end }}
