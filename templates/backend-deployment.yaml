@@ -17,7 +17,7 @@ spec:
           image: "{{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag }}"
           ports:
             - containerPort: {{ .Values.backend.ports.api }}
-            - containerPort: {{ .Values.backend.ports.frontend }}
+            # - containerPort: {{ .Values.backend.ports.frontend }}
           env:
             - name: MONGO_URI
               valueFrom:
